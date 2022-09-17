@@ -54,8 +54,7 @@ public class MainUser extends javax.swing.JFrame {
         txtBirthDate.setText(dtStr);
         txtEmail.setText(loggedInUser.getEmail());
         txtAddress.setText(loggedInUser.getAddress());
-        cbCountry.setSe
-        
+     
         
     }
 
