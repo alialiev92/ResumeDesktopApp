@@ -32,6 +32,7 @@ public class MainUser extends javax.swing.JFrame {
         initComponents();
         loggedInUser=userDao.getById(5);
         fillUSerComponent();
+        fillWindow();
     }
     
     private SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd");
@@ -41,6 +42,10 @@ public class MainUser extends javax.swing.JFrame {
         List<Country> countries=countryDao.getAll();
         for (Country c:countries) {
             cbCountry.addItem(c);
+        }
+        List<Country> nationality=countryDao.getAll();
+        for (Country n:nationality) {
+            cbNationality.addItem(n);
         }
     }
     private void fillUSerComponent(){
@@ -54,7 +59,10 @@ public class MainUser extends javax.swing.JFrame {
         txtBirthDate.setText(dtStr);
         txtEmail.setText(loggedInUser.getEmail());
         txtAddress.setText(loggedInUser.getAddress());
-     
+        
+        cbCountry.setSelectedItem(loggedInUser.getBirthPlace());
+        cbNationality.setSelectedItem(loggedInUser.getNationality());
+       
         
     }
 
@@ -299,6 +307,7 @@ public class MainUser extends javax.swing.JFrame {
             
             Date bd=new Date(sdf.parse(birthDate).getTime());
             Country country=(Country) cbCountry.getSelectedItem();
+            Country nationality=(Country) cbNationality.getSelectedItem();
             
             loggedInUser.setName(name);
             loggedInUser.setSurname(surname);
@@ -308,6 +317,7 @@ public class MainUser extends javax.swing.JFrame {
             loggedInUser.setPhone(phone);
             loggedInUser.setAddress(address);
             loggedInUser.setBirthPlace(country);
+            loggedInUser.setNationality(nationality);
             
             userDao.updateUser(loggedInUser);
         } catch (ParseException ex) {
