@@ -62,7 +62,6 @@ public class MainUser extends javax.swing.JFrame {
         
         cbCountry.setSelectedItem(loggedInUser.getBirthPlace());
         cbNationality.setSelectedItem(loggedInUser.getNationality());
-       
         
     }
 
