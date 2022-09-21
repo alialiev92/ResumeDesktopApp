@@ -60,8 +60,8 @@ public class MainUser extends javax.swing.JFrame {
         txtEmail.setText(loggedInUser.getEmail());
         txtAddress.setText(loggedInUser.getAddress());
         
-        cbCountry.setSelectedItem(loggedInUser.getBirthPlace());
-        cbNationality.setSelectedItem(loggedInUser.getNationality());
+        cbCountry.getModel().setSelectedItem(loggedInUser.getBirthPlace());
+        cbNationality.getModel().setSelectedItem(loggedInUser.getNationality());
         
     }
 
