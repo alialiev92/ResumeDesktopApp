@@ -23,7 +23,7 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="tpUserInfo" max="32767" attributes="0"/>
+          <Component id="panelSkill" max="32767" attributes="0"/>
           <Group type="102" alignment="1" attributes="0">
               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
               <Component id="jSeparator1" min="-2" pref="669" max="-2" attributes="0"/>
@@ -43,7 +43,7 @@
               <EmptySpace max="-2" attributes="0"/>
               <Component id="jSeparator1" min="-2" pref="10" max="-2" attributes="0"/>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Component id="tpUserInfo" min="-2" pref="411" max="-2" attributes="0"/>
+              <Component id="panelSkill" min="-2" pref="411" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
       </Group>
@@ -52,7 +52,7 @@
   <SubComponents>
     <Component class="javax.swing.JSeparator" name="jSeparator1">
     </Component>
-    <Container class="javax.swing.JTabbedPane" name="tpUserInfo">
+    <Container class="javax.swing.JTabbedPane" name="panelSkill">
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout"/>
       <SubComponents>
@@ -70,6 +70,15 @@
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
               <JTabbedPaneConstraints tabName="Profil Descreption">
                 <Property name="tabTitle" type="java.lang.String" value="Profil Descreption"/>
+              </JTabbedPaneConstraints>
+            </Constraint>
+          </Constraints>
+        </Component>
+        <Component class="com.company.resume.panel.SkillsPanel" name="skillsPanel1">
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+              <JTabbedPaneConstraints tabName="Skills">
+                <Property name="tabTitle" type="java.lang.String" value="Skills"/>
               </JTabbedPaneConstraints>
             </Constraint>
           </Constraints>

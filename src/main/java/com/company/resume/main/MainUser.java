@@ -4,15 +4,10 @@
  */
 package com.company.resume.main;
 
-import com.company.entity.Country;
 import com.company.entity.User;
 import static com.company.resume.config.Config.loggedInUser;
 import com.mycompany.dao.inter.UserDaoInter;
 import com.mycompany.main.Contex;
-import java.sql.Date;
-import java.text.ParseException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 /**
  *
@@ -30,6 +25,8 @@ public class MainUser extends javax.swing.JFrame {
         fillUSerComponent();
         panelDetail.fillUSerComponent();
         panelProfile.fillUSerComponent();
+        skillsPanel1.fillUSerComponent();
+        
 
     }
     
@@ -55,9 +52,10 @@ public class MainUser extends javax.swing.JFrame {
     private void initComponents() {
 
         jSeparator1 = new javax.swing.JSeparator();
-        tpUserInfo = new javax.swing.JTabbedPane();
+        panelSkill = new javax.swing.JTabbedPane();
         panelDetail = new com.company.resume.panel.DetailsPanel();
         panelProfile = new com.company.resume.panel.ProfilePanel();
+        skillsPanel1 = new com.company.resume.panel.SkillsPanel();
         pnlUserInfo = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         txtName = new javax.swing.JTextField();
@@ -67,8 +65,9 @@ public class MainUser extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        tpUserInfo.addTab("Details", panelDetail);
-        tpUserInfo.addTab("Profil Descreption", panelProfile);
+        panelSkill.addTab("Details", panelDetail);
+        panelSkill.addTab("Profil Descreption", panelProfile);
+        panelSkill.addTab("Skills", skillsPanel1);
 
         jLabel1.setText("Name");
 
@@ -116,7 +115,7 @@ public class MainUser extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(tpUserInfo)
+            .addComponent(panelSkill)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 669, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -133,7 +132,7 @@ public class MainUser extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(tpUserInfo, javax.swing.GroupLayout.PREFERRED_SIZE, 411, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(panelSkill, javax.swing.GroupLayout.PREFERRED_SIZE, 411, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
 
@@ -199,8 +198,9 @@ public class MainUser extends javax.swing.JFrame {
     private javax.swing.JSeparator jSeparator1;
     private com.company.resume.panel.DetailsPanel panelDetail;
     private com.company.resume.panel.ProfilePanel panelProfile;
+    private javax.swing.JTabbedPane panelSkill;
     private javax.swing.JPanel pnlUserInfo;
-    private javax.swing.JTabbedPane tpUserInfo;
+    private com.company.resume.panel.SkillsPanel skillsPanel1;
     private javax.swing.JTextField txtName;
     private javax.swing.JTextField txtSurname;
     // End of variables declaration//GEN-END:variables
